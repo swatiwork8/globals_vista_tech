@@ -51,7 +51,7 @@ const Navbar = () => {
 
         {/* MOBILE/TABLET CALL BUTTON */}
         <li className="mobile-call-btn">
-          <a href="tel:+91-9999999999" onClick={() => setMenuOpen(false)}>
+          <a href="tel:+91-9229566800" onClick={() => setMenuOpen(false)}>
             <FiPhone style={{ marginRight: "8px" }} />
             Call Now
           </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* RIGHT - DESKTOP CALL BUTTON */}
       <div className="nav-right">
-        <a href="tel:+91-9999999999" className="call-btn">
+        <a href="tel:+91-9229566800" className="call-btn">
           <FiPhone className="call-icon" />
           Call Now
         </a>
