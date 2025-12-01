@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+$dark: #0e1525;
+$text: #333;
+$primary: #007bff;
+
+section {
+  font-family: "Josefin Sans", sans-serif;
+  //   padding: 80px 20px;
+}
+
+/* -- WHO WE ARE SECTION -- */
+.who-section {
+  background: #fff;
+
+  .who-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .who-left img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 14px;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: imagePop 0.8s ease-out forwards;
+  }
+
+  @keyframes imagePop {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .who-right {
+    flex: 1;
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      color: $dark;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      color: $text;
+    }
+  }
+}
+
+/* -- WHY CHOOSE US SECTION -- */
+.why-section {
+  background: #fff;
+
+  .why-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .why-left {
+    flex: 1;
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: $dark;
+    }
+
+    .why-point {
+      margin-bottom: 25px;
+
+      h3 {
+        font-size: 20px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: $primary;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+        color: $text;
+      }
+    }
+  }
+
+  .why-right img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 14px;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: imageReveal 0.9s ease-out forwards;
+  }
+
+  @keyframes imageReveal {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* -- OUR VISION SECTION -- */
+.vision-section {
+  background: #fff;
+
+  .vision-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .vision-left img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 14px;
+    opacity: 0;
+    transform: scale(0.6);
+    animation: imagePop 0.8s ease-out forwards;
+  }
+
+  @keyframes imagePop {
+    0% {
+      opacity: 0;
+      transform: scale(0.6);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .vision-right {
+    flex: 1;
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      color: $dark;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      color: $text;
+    }
+  }
+}
+
+/* -- RESPONSIVE -- */
+@media (max-width: 992px) {
+  .who-container,
+  .why-container,
+  .vision-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .who-right,
+  .why-left,
+  .vision-right {
+    padding: 0 10px;
+  }
+
+  .who-left img,
+  .why-right img,
+  .vision-left img {
+    margin: auto;
+
+    opacity: 0;
+    transform: scale(0.7);
+    animation: imageIn 0.9s ease-out forwards;
+  }
+
+  /* KEYFRAMES */
+  @keyframes imageIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+
+  .who-right h1,
+  .why-left h1,
+  .vision-right {
+    font-size: 28px;
+  }
+
+  .why-left h3 {
+    font-size: 18px;
+  }
+
+  .who-left img,
+  .why-right img,
+  .vision-left img {
+    animation: imageIn 1s ease-out forwards;
+  }
+}

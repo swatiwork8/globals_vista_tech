@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding: 0 40px;
+  background: #f8f9fc;
+  color: rgb(17 24 39);
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #bdc3c7;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+  /* ---------------- LOGO ---------------- */
+  .logo-link {
+    display: inline-block;
+  }
+
+  .logo {
+    width: 12rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+      transform: scale(1.07);
+      opacity: 0.9;
+    }
+  }
+
+  /* ---------------- DESKTOP MENU ---------------- */
+  .nav-menu {
+    display: flex;
+    gap: 7rem;
+    list-style: none;
+    font-size: 18px;
+
+    li a {
+      color: rgb(17 24 39);
+      text-decoration: none;
+      transition: 0.3s;
+
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  /* ---------------- DESKTOP CALL BUTTON ---------------- */
+  .nav-right .call-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #007bff;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 123, 255, 0.3);
+
+    &:hover {
+      background: #0066d6;
+      transform: translateY(-2px);
+    }
+
+    .call-icon {
+      font-size: 20px;
+      margin-bottom: 2px;
+    }
+  }
+
+  /* ---------------- HAMBURGER ---------------- */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+
+    span {
+      width: 28px;
+      height: 3px;
+      background: #000;
+      transition: 0.3s;
+    }
+
+    &.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+
+  /* ---------------- MOBILE CALL BUTTON ---------------- */
+  .mobile-call-btn {
+    display: none;
+
+    a {
+      background: #007bff;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+  }
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media (max-width: 992px) {
+    padding: 0 20px;
+
+    .nav-menu {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: #01051f;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+      gap: 2rem;
+      display: none;
+
+      li a {
+        color: #fff;
+      }
+    }
+
+    .nav-menu.open {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .nav-right {
+      display: none;
+    }
+
+    .mobile-call-btn {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+}
