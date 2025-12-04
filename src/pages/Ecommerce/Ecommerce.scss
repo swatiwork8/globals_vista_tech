@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+.ecommerce-page {
+  width: 100%;
+  // padding: 60px 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: #111827;
+
+  h1,
+  h2 {
+    color: #111827;
+    font-weight: 700;
+  }
+
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #374151;
+  }
+
+  /* ================= Header Section ================= */
+  .header {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 50px;
+background-color: #1d4ed8;
+    border-radius: 50px;
+    padding: 70px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    h1 {
+      font-size: 2.7rem;
+      margin-bottom: 15px;
+      color: #f8faff;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+      color: #eef6ff;
+    }
+  }
+
+  /* ================= Intro Section ================= */
+  .intro-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    .left {
+      flex: 1;
+
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        font-size: 1.15rem;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 550px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        transition: 0.35s ease;
+                  transform: translateX(-40px);
+          animation: slideIn 0.8s ease-out forwards;
+
+                  &:hover {
+            transform: scale(1.03);
+          }
+        }
+
+        @keyframes slideIn {
+          0% {
+            opacity: 0;
+            transform: translateX(-40px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+
+
+  /* ================= Services Section ================= */
+  .services {
+    width: 90%;
+    max-width: 1100px;
+    margin: 60px auto;
+
+    .service-box {
+      margin-bottom: 50px;
+      padding: 30px;
+      border-radius: 14px;
+      background: #f8faff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+      h2 {
+        font-size: 1.7rem;
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin-bottom: 1.15rem;
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 8px;
+          list-style: circle;
+        }
+      }
+    }
+  }
+
+  /* ================= Why Choose Us ================= */
+  .why-us {
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+    background-color: #1d4ed8;
+    border-radius: 50px;
+    padding: 70px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #f8faff;
+    }
+
+    ol {
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 10px;
+        list-style: square;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #f8faff;
+      }
+        //       &::before {
+        //   content: "✦";
+        //   font-size: 1rem;
+        //   color: #eef6ff;
+        // }
+    }
+  }
+
+  /* ================= Responsive ================= */
+
+  @media (max-width: 1024px) {
+    .intro-section {
+      gap: 30px;
+
+      .image-box img {
+        max-width: 480px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    .intro-section {
+      flex-direction: column-reverse;
+      text-align: center;
+
+      .text {
+        text-align: center;
+      }
+
+      .image-box img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header h1 {
+      font-size: 2.2rem;
+    }
+
+    .intro-section .text h2 {
+      font-size: 1.6rem;
+    }
+
+    .service-box {
+      padding: 20px;
+    }
+
+    .why-us {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .header h1 {
+      font-size: 1.9rem;
+    }
+  }

@@ -1,0 +1,452 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
+.website-dev-page {
+  width: 100%;
+  line-height: 1.7;
+  color: #1e293b;
+  font-family: "Josefin Sans", sans-serif;
+
+  section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-align: center;
+      color: #0f172a;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #334155;
+    }
+  }
+
+  /* ----------------------------------------------------
+        BANNER SECTION (Left Text + Right Image)
+  ---------------------------------------------------- */
+  .banner {
+    width: 100%;
+    padding: 80px 0;
+
+    .banner-content {
+      width: 100%;
+      max-width: 1300px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+
+      /* LEFT SIDE */
+      .left {
+        flex: 1;
+
+        h1 {
+          font-size: 2.8rem;
+          font-weight: 800;
+          color: #111827;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1.15rem;
+          color: #334155;
+          line-height: 1.7;
+          margin-bottom: 25px;
+
+          b {
+            color: #0f172a;
+          }
+        }
+
+        .cta-buttons {
+          display: flex;
+          gap: 15px;
+
+          button {
+            padding: 12px 25px;
+            border: none;
+            background: #2563eb;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            &:hover {
+              background: #1e40af;
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+
+      /* RIGHT SIDE */
+      .right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          max-width: 550px;
+          border-radius: 14px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          transition: 0.35s ease;
+          opacity: 0;
+          transform: translateX(-40px);
+          animation: slideIn 0.8s ease-out forwards;
+
+          &:hover {
+            transform: scale(1.03);
+          }
+        }
+
+        @keyframes slideIn {
+          0% {
+            opacity: 0;
+            transform: translateX(-40px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 992px) {
+      .banner-content {
+        flex-direction: column;
+        text-align: center;
+
+        .left {
+          h1 {
+            font-size: 2.3rem;
+          }
+
+          p {
+            font-size: 1.1rem;
+            width: 95%;
+            margin: auto;
+          }
+
+          .cta-buttons {
+            justify-content: center;
+          }
+        }
+
+        .right img {
+          max-width: 450px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 60px 0;
+
+      .banner-content {
+        .left {
+          h1 {
+            font-size: 1.9rem;
+          }
+          p {
+            font-size: 1.05rem;
+          }
+        }
+
+        .right img {
+          max-width: 340px;
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      .banner-content {
+        .left {
+          h1 {
+            font-size: 1.6rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        .right img {
+          max-width: 300px;
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        WHY WEBSITE SECTION
+  ---------------------------------------------------- */
+  .why-website {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    background-color: #1d4ed8;
+    border-radius: 50px;
+    padding: 70px 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: #f1f5f9;
+      width: 85%;
+      margin: 12px auto;
+      line-height: 1.7;
+
+      b {
+        color: #e2e8f0;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      h2 {
+        font-size: 1.9rem;
+      }
+      p {
+        width: 95%;
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 50px 15px;
+      h2 {
+        font-size: 1.7rem;
+      }
+      p {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        SERVICES LIST
+  ---------------------------------------------------- */
+  .services {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 20px;
+        background: #f1f5f9;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.35s ease;
+
+        h3 {
+          font-size: 1.4rem;
+          color: #1e293b;
+        }
+
+        &:hover {
+          background: #e2e8f0;
+          transform: translateY(-6px);
+          box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        PROCESS STEPS
+  ---------------------------------------------------- */
+  .process {
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+
+      div {
+        background: #cbd5e1;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        cursor: pointer;
+        transform: scale(0.96);
+        transition: 0.35s ease;
+
+        h3 {
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+        }
+
+        &:hover {
+          transform: scale(1) translateY(-6px);
+          background: #e2e8f0;
+          box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        PRICING CARDS
+  ---------------------------------------------------- */
+  .pricing {
+    .pricing-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+
+      .card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: center;
+
+        h3 {
+          font-size: 1.4rem;
+        }
+
+        .price {
+          font-size: 1.4rem;
+          font-weight: 700;
+          margin: 15px 0;
+          color: #2563eb;
+        }
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin: 8px 0;
+          }
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        FAQ SECTION
+  ---------------------------------------------------- */
+  .faqs {
+    .faq-item {
+      background: #cbd5e1;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: 0.3s ease;
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+
+      &:hover {
+        background: #e2e8f0;
+        box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        FINAL CTA
+  ---------------------------------------------------- */
+  .final-cta {
+    text-align: center;
+    background-color: #1d4ed8;
+    border-radius: 50px;
+    padding: 60px 20px;
+
+    h2 {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .cta-buttons {
+      margin-top: 20px;
+
+      button {
+        padding: 12px 25px;
+        margin: 5px;
+        border: none;
+        background: #fff;
+        color: #1e40af;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: "Josefin Sans", sans-serif;
+
+        &:hover {
+          background: #cbd5e1;
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------
+        GLOBAL RESPONSIVE FIXES
+  ---------------------------------------------------- */
+
+  /* Tablets */
+  @media (max-width: 992px) {
+    .process .process-steps {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing .pricing-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobiles */
+  @media (max-width: 768px) {
+    section {
+      //   padding: 40px 0;
+    }
+
+    .process .process-steps,
+    .pricing .pricing-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons button {
+      width: 100%;
+    }
+  }
+
+  /* Small Phones */
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 1.6rem !important;
+    }
+  }
+}

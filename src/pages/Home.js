@@ -9,17 +9,47 @@ import account from "../assets/account.jpg";
 const serviceData = [
   {
     title: "Website Development",
-    desc: "Our Website Development Services deliver modern, responsive, and high-quality websites tailored to your business goals. Whether you need a business site, portfolio, e-commerce store, or custom web app, we provide fast, secure, and user-friendly solutions. We also create landing pages, redesign websites, and develop on WordPress and Shopify.",
+    slug: "website-development",
+    points: [
+      "Static Website Design",
+      "Responsive Website Development",
+      "Ecommerce Website Development",
+      "Landing Page Creation",
+      "UI/UX Design Optimization",
+      "Website Maintenance & Support",
+      "Hosting & Domain Setup Assistance",
+      "SEO-Friendly Website Setup",
+    ],
   },
 
   {
     title: "Grow Your Ecommerce",
-    desc: "Our E-commerce Services help businesses start and grow online smoothly. We manage marketplace setup on Amazon, Flipkart, and Meesho, along with cataloging, listings, and product optimization. Our team handles orders, boosts visibility, and ensures daily operations run easily. We also build Shopify and WooCommerce stores to help brands scale faster.",
+    slug: "grow-your-ecommerce",
+    points: [
+      "Brand Approval Assistance",
+      "Listing & Cataloging",
+      "Promotional Activities",
+      "Advertising & Marketing",
+      "Monthly Sales Boost",
+      "Rank Improvement",
+      "Account Health Management",
+      "Feedback Management",
+    ],
   },
 
   {
     title: "IT Services",
-    desc: "Our IT Support & Maintenance Services ensure your website runs smoothly, securely, and without downtime. We provide website maintenance, quick bug fixing, and advanced speed optimization to enhance performance. Our team also offers reliable technical support, helping you resolve issues fast and maintain a flawless online experience for your customers.",
+    slug: "it-services",
+    points: [
+      "Software Configuration",
+      "Application Installation Support",
+      "Email Account Configuration",
+      "System Update & Maintenance",
+      "Device Setup & Initialization",
+      "Printer & Peripheral Setup",
+      "System Security & Virus Scan",
+      "General IT Support Services",
+    ],
   },
 ];
 
@@ -34,22 +64,18 @@ const Home = () => {
               Grow Your Business with a <span>Powerful Website</span> or{" "}
               <span>E-commerce Store</span>
             </h1>
-            <h3>
-              Take Your Business to the Next Level with Global's Vista
-              Technologies
-            </h3>
+            <h3>Take Your Business to the Next Level with abc</h3>
 
             <p>
               Take your business to the next level with a modern website or
-              high-performance e-commerce store built by Global's Vista
-              Technologies. We create digital platforms that don’t just look
-              great — they attract customers, boost sales, and strengthen your
-              online presence. Whether you need a sleek business website or a
-              full-scale online store, our solutions are designed for speed,
-              security, and long-term growth. With customized strategies, strong
-              technical foundations, and end-to-end support, we make it easier
-              for you to scale your business confidently in today’s digital
-              world.
+              high-performance e-commerce store built by abc. We create digital
+              platforms that don’t just look great — they attract customers,
+              boost sales, and strengthen your online presence. Whether you need
+              a sleek business website or a full-scale online store, our
+              solutions are designed for speed, security, and long-term growth.
+              With customized strategies, strong technical foundations, and
+              end-to-end support, we make it easier for you to scale your
+              business confidently in today’s digital world.
             </p>
             <Link to="/services" className="btn">
               Get Started
@@ -70,13 +96,18 @@ const Home = () => {
         <div className="special-grid">
           {serviceData.map((item, i) => (
             <Link
-              to={`/services/${item.title.replace(/\s+/g, "-").toLowerCase()}`}
+              to={`/services/${item.slug}`}
               className="special-card"
               key={i}
             >
               <h3>{item.title}</h3>
               <hr />
-              <p>{item.desc}</p>
+
+              <ul className="service-points">
+                {item.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
             </Link>
           ))}
         </div>

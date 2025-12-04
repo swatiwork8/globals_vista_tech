@@ -3,7 +3,7 @@
 /* ------------------ HOME SECTION ------------------ */
 .home {
   width: 100%;
-  padding: 25px 0;
+  padding: 35px 0;
   display: flex;
   justify-content: center;
   font-family: "Josefin Sans", sans-serif;
@@ -37,6 +37,7 @@
 
       @media (max-width: 768px) {
         font-size: 2rem;
+        margin-top: -1rem;
       }
     }
 
@@ -116,14 +117,14 @@
 /* ------------------ SERVICE SECTION ------------------ */
 .service {
   width: 100%;
-  padding: 60px 0;
+  padding: 90px 0;
   text-align: center;
-  background-color: #9dccff;
+  background: linear-gradient(135deg, #9dccff, #b6d7ff);
 
   h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: rgb(17 24 39);
   }
 
@@ -133,7 +134,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 40px;
 
     @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
@@ -144,53 +145,55 @@
     }
   }
 
-  .special-card-link {
+  .special-card {
+    background: #ffffff;
+    padding: 35px 60px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: 0.35s ease;
+    cursor: pointer;
     text-decoration: none;
     color: inherit;
-  }
-
-  .special-card {
-    cursor: pointer;
-  }
-
-  .special-card {
-    background: #fff;
-    border: 1px solid #c8d9ff;
-    padding: 25px 22px;
-    border-radius: 10px;
-    transition: 0.3s ease;
-    text-decoration: none;
-    text-align: left;
-    cursor: pointer;
 
     &:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.1);
-      color: #f8f9fc;
-      background-color: #007bff;
-      border-color: #9bc0ff;
+      transform: translateY(-10px);
+      background: #f3f8ff;
+      border-color: #4f8dff;
+      box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
     }
 
     h3 {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      color: rgb(17 24 39);
+      text-transform: capitalize;
     }
 
     hr {
-      height: 1px;
       border: none;
-      background: #d8d8d8;
-      margin-bottom: 15px;
+      border-top: 1px solid #d7dadf;
+      margin: 15px 0 20px 0;
     }
 
-    p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #444;
+    .service-points {
+      list-style: none;
+      padding-left: 0;
 
-      &:hover {
-        color: #fff;
+      li {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #1f2937;
+
+        &::before {
+          content: "✦";
+          font-size: 1rem;
+          color: #444;
+        }
       }
     }
   }
@@ -244,7 +247,7 @@
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 15px;
-      color: #222;
+      color: rgb(17 24 39);
     }
 
     img {

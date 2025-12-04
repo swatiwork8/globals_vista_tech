@@ -31,6 +31,19 @@
       opacity: 0.9;
     }
   }
+  /* Large Mobile */
+  @media (max-width: 768px) {
+    .logo {
+      width: 9rem;
+    }
+  }
+
+  /* Small Mobile */
+  @media (max-width: 480px) {
+    .logo {
+      width: 7rem;
+    }
+  }
 
   /* ---------------- DESKTOP MENU ---------------- */
   .nav-menu {

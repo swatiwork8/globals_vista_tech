@@ -1,0 +1,154 @@
+.it-services-page {
+  width: 100%;
+  padding: 80px 0;
+  background: #f9fafb;
+
+  .it-row {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    /* ------------ Text Box ------------ */
+    .it-content {
+      flex: 1;
+
+      h1 {
+          font-size: 2.8rem;
+          font-weight: 800;
+          color: #111827;
+          line-height: 1.2;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1.15rem;
+          color: #334155;
+          line-height: 1.7;
+          margin-bottom: 25px;
+
+          b {
+            color: #0f172a;
+          }
+        }
+
+
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #111827;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #4b5563;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        margin-top: 10px;
+
+        li {
+          font-size: 1rem;
+          margin-bottom: 10px;
+          color: #374151;
+          display: flex;
+          align-items: start;
+          gap: 10px;
+
+          &::before {
+            content: "✔";
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+
+    /* ------------ Image Box ------------ */
+    .it-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 520px;
+        border-radius: 14px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: 0.35s ease;
+
+        /* Same hover behavior as your WebsiteDevelopment page */
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  /* Reverse layout (image left, text right) */
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* --------------------- Responsive --------------------- */
+
+  @media (max-width: 1024px) {
+    .it-row {
+      margin-bottom: 60px;
+
+      .it-content h2 {
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    .it-row {
+      flex-direction: column;
+      text-align: center;
+
+      &.reverse {
+        flex-direction: column;
+      }
+
+      .it-image img {
+        max-width: 450px;
+      }
+
+      .it-content {
+        p,
+        ul li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 0;
+
+    .it-row {
+      margin-bottom: 50px;
+
+      .it-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .it-content p,
+      .it-content ul li {
+        font-size: 0.95rem;
+      }
+
+      .it-image img {
+        max-width: 100%;
+      }
+    }
+  }
+}
