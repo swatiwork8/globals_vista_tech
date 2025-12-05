@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
 
 $dark: #0e1525;
-$text: #333;
+$text: #334155;
 $primary: #007bff;
 
 section {
   font-family: "Josefin Sans", sans-serif;
-  //   padding: 80px 20px;
+  padding: 80px 20px;
 }
 
-/* -- WHO WE ARE SECTION -- */
+/* ---------------- WHO WE ARE ---------------- */
 .who-section {
   background: #fff;
 
@@ -19,48 +19,42 @@ section {
     display: flex;
     gap: 40px;
     align-items: center;
-  }
 
-  .who-left img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 14px;
-    opacity: 0;
-    transform: scale(0.6);
-    animation: imagePop 0.8s ease-out forwards;
-  }
+    .who-left {
+      flex: 1;
 
-  @keyframes imagePop {
-    0% {
-      opacity: 0;
-      transform: scale(0.6);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .who-right {
-    flex: 1;
-
-    h1 {
-      font-size: 34px;
-      margin-bottom: 15px;
-      color: $dark;
-      font-weight: 700;
+      img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 14px;
+        opacity: 0;
+        transform: translateX(-60px);
+        animation: slideInLeft 0.8s ease forwards;
+      }
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 18px;
-      color: $text;
+    .who-right {
+      flex: 1;
+      text-align: justify;
+
+      h1 {
+        font-size: 34px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.12rem;
+        line-height: 1.8;
+        color: $text;
+        margin-bottom: 16px;
+      }
     }
   }
 }
 
-/* -- WHY CHOOSE US SECTION -- */
+/* ---------------- WHY CHOOSE US (REVERSE SECTION) ---------------- */
 .why-section {
   background: #fff;
 
@@ -70,59 +64,63 @@ section {
     display: flex;
     gap: 40px;
     align-items: center;
-  }
 
-  .why-left {
-    flex: 1;
+    /* REVERSE LAYOUT FOR DESKTOP */
+    &.reverse {
+      flex-direction: row-reverse;
 
-    h1 {
-      font-size: 34px;
-      margin-bottom: 20px;
-      font-weight: 700;
-      color: $dark;
-    }
-
-    .why-point {
-      margin-bottom: 25px;
-
-      h3 {
-        font-size: 20px;
-        margin-bottom: 6px;
-        font-weight: 600;
-        color: $primary;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 1.7;
-        margin-bottom: 18px;
-        color: $text;
+      .why-left img {
+        transform: translateX(60px);
+        animation: slideInRight 0.9s ease forwards;
       }
     }
-  }
 
-  .why-right img {
-    width: 100%;
-    max-width: 480px;
-    border-radius: 14px;
-    opacity: 0;
-    transform: scale(0.6);
-    animation: imageReveal 0.9s ease-out forwards;
-  }
+    .why-left {
+      flex: 1;
+      text-align: justify;
 
-  @keyframes imageReveal {
-    0% {
-      opacity: 0;
-      transform: scale(0.6);
+      img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 14px;
+        opacity: 0;
+        transform: translateX(-60px);
+        animation: slideInLeft 0.8s ease forwards;
+      }
     }
-    100% {
-      opacity: 1;
-      transform: scale(1);
+
+    .why-right {
+      flex: 1;
+      text-align: justify;
+
+      h1 {
+        font-size: 34px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 20px;
+      }
+
+      .why-point {
+        margin-bottom: 20px;
+
+        h3 {
+          font-size: 20px;
+          font-weight: 600;
+          color: $primary;
+          margin-bottom: 6px;
+        }
+
+        p {
+          font-size: 1.12rem;
+          line-height: 1.8;
+          color: $text;
+        }
+      }
     }
   }
 }
 
-/* -- OUR VISION SECTION -- */
+/* ---------------- VISION ---------------- */
 .vision-section {
   background: #fff;
 
@@ -132,81 +130,88 @@ section {
     display: flex;
     gap: 40px;
     align-items: center;
-  }
 
-  .vision-left img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 14px;
-    opacity: 0;
-    transform: scale(0.6);
-    animation: imagePop 0.8s ease-out forwards;
-  }
+    .vision-left {
+      flex: 1;
 
-  @keyframes imagePop {
-    0% {
-      opacity: 0;
-      transform: scale(0.6);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .vision-right {
-    flex: 1;
-
-    h1 {
-      font-size: 34px;
-      margin-bottom: 15px;
-      color: $dark;
-      font-weight: 700;
+      img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 14px;
+        opacity: 0;
+        transform: translateX(-60px);
+        animation: slideInLeft 0.8s ease forwards;
+      }
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 18px;
-      color: $text;
+    .vision-right {
+      flex: 1;
+      text-align: justify;
+
+      h1 {
+        font-size: 34px;
+        font-weight: 700;
+        color: $dark;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.12rem;
+        line-height: 1.8;
+        color: $text;
+        margin-bottom: 16px;
+      }
     }
   }
 }
 
-/* -- RESPONSIVE -- */
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 992px) {
   .who-container,
   .why-container,
   .vision-container {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
-  }
 
-  .who-right,
-  .why-left,
-  .vision-right {
-    padding: 0 10px;
-  }
-
-  .who-left img,
-  .why-right img,
-  .vision-left img {
-    margin: auto;
-
-    opacity: 0;
-    transform: scale(0.7);
-    animation: imageIn 0.9s ease-out forwards;
-  }
-
-  /* KEYFRAMES */
-  @keyframes imageIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.7);
+    .who-right,
+    .why-right,
+    .vision-right,
+    .why-left,
+    .vision-left {
+      padding: 0 10px;
+      text-align: justify;
     }
-    100% {
-      opacity: 1;
-      transform: scale(1);
+
+    /* Image responsive animation */
+    img {
+      margin: auto;
+      max-width: 90%;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInLeft 1s ease forwards;
     }
   }
 }
@@ -216,19 +221,15 @@ section {
     padding: 60px 15px;
   }
 
-  .who-right h1,
-  .why-left h1,
-  .vision-right {
+  h1 {
     font-size: 28px;
   }
 
-  .why-left h3 {
+  h3 {
     font-size: 18px;
   }
 
-  .who-left img,
-  .why-right img,
-  .vision-left img {
-    animation: imageIn 1s ease-out forwards;
+  p {
+    font-size: 15px;
   }
 }

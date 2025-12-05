@@ -1,27 +1,25 @@
 import "./Ecommerce.scss";
-import ecommerce_img from "../../assets/growth_business.jpg"; 
+import ecommerce_img from "../../assets/growth_business.jpg";
 
 const Ecommerce = () => {
   return (
     <div className="ecommerce-page">
-
       {/* ===================== Intro Section (Text Left - Image Right) ===================== */}
       <div className="intro-section">
         <div className="left">
           <h1>Grow Your Online Business With Ease</h1>
           <p>
             Running an online store requires expertise, consistency, and the
-            right strategy. At <strong>ABC</strong>, we help businesses build
-            profitable e-commerce brands by managing everything — from product
-            listing to advertising, from catalog optimization to account growth.
+            right strategy. At <strong>Global's Vista Technologies</strong>, we
+            help businesses build profitable e-commerce brands by managing
+            everything — from product listing to advertising, from catalog
+            optimization to account growth.
           </p>
           <p>
             Whether you sell on{" "}
-            <strong>
-              Amazon, Flipkart, Meesho, Shopify, Myntra, Ajio
-            </strong>{" "}
-            or any other platform, we ensure your store looks professional,
-            ranks better, and generates more sales.
+            <strong>Amazon, Flipkart, Meesho, Shopify, Myntra, Ajio</strong> or
+            any other platform, we ensure your store looks professional, ranks
+            better, and generates more sales.
           </p>
         </div>
 
@@ -30,7 +28,7 @@ const Ecommerce = () => {
         </div>
       </div>
 
-            {/* ===================== Header Section ===================== */}
+      {/* ===================== Header Section ===================== */}
       <div className="header">
         <h1>Grow Your Ecommerce With Us</h1>
         <p>
@@ -42,7 +40,6 @@ const Ecommerce = () => {
 
       {/* ===================== Service Sections ===================== */}
       <div className="services">
-
         {/* -------- Product Listing & Cataloging -------- */}
         <div className="service-box">
           <h2>Product Listing & Cataloging</h2>
@@ -140,12 +137,11 @@ const Ecommerce = () => {
             <li>GS1 barcode & trademark guidance</li>
           </ul>
         </div>
-
       </div>
 
       {/* ===================== Why Choose Us ===================== */}
       <div className="why-us">
-        <h2>Why Choose ABC?</h2>
+        <h2>Why Choose Global's Vista Technologies?</h2>
         <ol>
           <li>End-to-end account management</li>
           <li>Proven sales growth strategies</li>

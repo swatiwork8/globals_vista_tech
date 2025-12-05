@@ -1,1 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
 
+.service-page {
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  color: #111827;
+
+  /* ================= HERO SECTION ================= */
+  .hero {
+    width: 90%;
+    max-width: 1350px;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    .text {
+      flex: 1;
+
+      h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        text-align: justify;
+      }
+    }
+
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        max-width: 520px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        transition: 0.35s ease;
+        transform: translateX(60px);
+        opacity: 0;
+        animation: slideIn 1s ease forwards;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(60px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* ================= SERVICES SECTION ================= */
+  .service-section {
+    width: 90%;
+    max-width: 1350px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+
+    .service-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: 0.3s ease;
+      text-decoration: none !important;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+      img {
+        width: 100%;
+        max-width: 260px;
+        height: 200px;
+        object-fit: cover;
+        margin: 0 auto 20px;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        transition: 0.35s ease;
+
+        &:hover {
+          transform: scale(1.04);
+        }
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+      }
+    }
+  }
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width: 900px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+
+      .image img {
+        max-width: 380px;
+        height: 300px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      margin: 50px auto;
+
+      .text h1 {
+        font-size: 2rem;
+      }
+
+      .image img {
+        max-width: 300px;
+        height: 250px;
+      }
+    }
+
+    .service-section {
+      .service-card img {
+        max-width: 100%;
+        height: 180px;
+      }
+    }
+  }
+}

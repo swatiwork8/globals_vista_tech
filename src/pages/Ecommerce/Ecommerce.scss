@@ -2,14 +2,13 @@
 
 .ecommerce-page {
   width: 100%;
-  // padding: 60px 0;
   font-family: "Josefin Sans", sans-serif;
   color: #111827;
 
   h1,
   h2 {
-    color: #111827;
     font-weight: 700;
+    color: #111827;
   }
 
   p,
@@ -19,32 +18,10 @@
     color: #374151;
   }
 
-  /* ================= Header Section ================= */
-  .header {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 50px;
-background-color: #1d4ed8;
-    border-radius: 50px;
-    padding: 70px 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    h1 {
-      font-size: 2.7rem;
-      margin-bottom: 15px;
-      color: #f8faff;
-    }
+  /* ===========================================
+        INTRO SECTION (Text Left - Image Right)
+  ============================================ */
 
-    p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: auto;
-      color: #eef6ff;
-    }
-  }
-
-  /* ================= Intro Section ================= */
   .intro-section {
     width: 90%;
     max-width: 1200px;
@@ -58,13 +35,12 @@ background-color: #1d4ed8;
       flex: 1;
 
       h1 {
-        font-size: 2.8rem;
-        margin-bottom: 20px;
+        font-size: 2.6rem;
+        margin-bottom: 18px;
       }
 
       p {
-        margin-bottom: 16px;
-        font-size: 1.15rem;
+        margin-bottom: 15px;
       }
     }
 
@@ -75,57 +51,87 @@ background-color: #1d4ed8;
 
       img {
         width: 100%;
-        max-width: 550px;
+        max-width: 520px;
         border-radius: 16px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        animation: fadeSlide 0.8s ease-out forwards;
+        transform: translateX(-35px);
         transition: 0.35s ease;
-                  transform: translateX(-40px);
-          animation: slideIn 0.8s ease-out forwards;
 
-                  &:hover {
-            transform: scale(1.03);
-          }
+        &:hover {
+          transform: scale(1.03);
         }
+      }
+    }
 
-        @keyframes slideIn {
-          0% {
-            opacity: 0;
-            transform: translateX(-40px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
+    @keyframes fadeSlide {
+      0% {
+        opacity: 0;
+        transform: translateX(-35px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   }
 
+  /* ===========================================
+                  HEADER
+  ============================================ */
 
-  /* ================= Services Section ================= */
+  .header {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    background: #1d4ed8;
+    padding: 65px 20px;
+    border-radius: 40px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+    h1 {
+      color: #f8faff;
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #eaf2ff;
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+  }
+
+  /* ===========================================
+                SERVICES SECTION
+  ============================================ */
+
   .services {
     width: 90%;
     max-width: 1100px;
     margin: 60px auto;
 
     .service-box {
-      margin-bottom: 50px;
       padding: 30px;
       border-radius: 14px;
+      margin-bottom: 45px;
       background: #f8faff;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
 
       h2 {
         font-size: 1.7rem;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
 
       p {
-        margin-bottom: 1.15rem;
+        margin-bottom: 15px;
       }
 
       ul {
-        padding-left: 20px;
+        padding-left: 22px;
 
         li {
           margin-bottom: 8px;
@@ -135,88 +141,103 @@ background-color: #1d4ed8;
     }
   }
 
-  /* ================= Why Choose Us ================= */
+  /* ===========================================
+                WHY CHOOSE US
+  ============================================ */
+
   .why-us {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
-    margin: 60px auto;
-    background-color: #1d4ed8;
-    border-radius: 50px;
-    padding: 70px 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    margin: 70px auto;
+    background: #1d4ed8;
+    padding: 65px 25px;
+    border-radius: 40px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
 
     h2 {
-      text-align: center;
-      margin-bottom: 20px;
       font-size: 2rem;
+      text-align: center;
       color: #f8faff;
+      margin-bottom: 25px;
     }
 
     ol {
-      padding-left: 20px;
+      padding-left: 22px;
 
       li {
         margin-bottom: 10px;
-        list-style: square;
         font-size: 1.2rem;
+        list-style: square;
         line-height: 1.6;
-        color: #f8faff;
+        color: #eaf2ff;
       }
-        //       &::before {
-        //   content: "✦";
-        //   font-size: 1rem;
-        //   color: #eef6ff;
-        // }
     }
   }
 
-  /* ================= Responsive ================= */
+  /* ===========================================
+                RESPONSIVE DESIGN
+  ============================================ */
 
+  /* -------- Tablet 1024px -------- */
   @media (max-width: 1024px) {
     .intro-section {
       gap: 30px;
 
-      .image-box img {
-        max-width: 480px;
+      .right img {
+        max-width: 450px;
       }
     }
   }
 
+  /* -------- Tablets 900px -------- */
   @media (max-width: 900px) {
     .intro-section {
       flex-direction: column-reverse;
       text-align: center;
 
-      .text {
+      .left {
         text-align: center;
       }
 
-      .image-box img {
+      .right img {
+        transform: translateX(0);
         max-width: 100%;
       }
     }
   }
 
+  /* -------- Mobile 600px -------- */
   @media (max-width: 600px) {
-    .header h1 {
-      font-size: 2.2rem;
+    .intro-section .left h1 {
+      font-size: 2rem;
     }
 
-    .intro-section .text h2 {
-      font-size: 1.6rem;
+    .header {
+      padding: 40px 18px;
+
+      h1 {
+        font-size: 2rem;
+      }
     }
 
     .service-box {
-      padding: 20px;
+      padding: 22px;
     }
 
     .why-us {
-      padding: 20px;
+      padding: 35px 18px;
+      border-radius: 28px;
     }
   }
 
+  /* -------- Small Mobile 420px -------- */
   @media (max-width: 420px) {
+    .intro-section .left h1 {
+      font-size: 1.7rem;
+    }
+
     .header h1 {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
   }
+}

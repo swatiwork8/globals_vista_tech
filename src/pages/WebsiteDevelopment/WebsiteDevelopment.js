@@ -11,11 +11,11 @@ const WebsiteDevelopment = () => {
           <div className="left">
             <h1>Grow Your Business with Powerful & High-Converting Websites</h1>
             <p>
-              At <b>ABC</b>, we build modern, responsive, and performance-driven
-              websites that help brands stand out and convert visitors into
-              customers. Whether you're a startup, local business, or large
-              enterprise — we create digital experiences that accelerate your
-              business growth.
+              At <b>Global's Vista Technologies</b>, we build modern,
+              responsive, and performance-driven websites that help brands stand
+              out and convert visitors into customers. Whether you're a startup,
+              local business, or large enterprise — we create digital
+              experiences that accelerate your business growth.
             </p>
 
             <div className="cta-buttons">
@@ -160,7 +160,7 @@ const WebsiteDevelopment = () => {
         <div className="pricing-cards">
           <div className="card">
             <h3>⭐ Basic Website</h3>
-            <p className="price">₹7,999 – ₹14,999</p>
+            <p className="price">₹4,999 – ₹9,999</p>
             <ul>
               <li>3–5 Pages</li>
               <li>Basic Design</li>
@@ -171,7 +171,7 @@ const WebsiteDevelopment = () => {
 
           <div className="card">
             <h3>🔥 Standard Business Website</h3>
-            <p className="price">₹15,000 – ₹34,999</p>
+            <p className="price">₹10,000 – ₹20,999</p>
             <ul>
               <li>6–10 Pages</li>
               <li>Professional UI/UX</li>
@@ -183,7 +183,7 @@ const WebsiteDevelopment = () => {
 
           <div className="card">
             <h3>🚀 Premium Website</h3>
-            <p className="price">₹35,000 – ₹1,50,000+</p>
+            <p className="price">₹21,000 – ₹39,999</p>
             <ul>
               <li>Unlimited Pages</li>
               <li>E-commerce Features</li>

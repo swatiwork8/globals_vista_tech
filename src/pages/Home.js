@@ -64,18 +64,22 @@ const Home = () => {
               Grow Your Business with a <span>Powerful Website</span> or{" "}
               <span>E-commerce Store</span>
             </h1>
-            <h3>Take Your Business to the Next Level with abc</h3>
+            <h3>
+              Take Your Business to the Next Level with Global's Vista
+              Technologies
+            </h3>
 
             <p>
               Take your business to the next level with a modern website or
-              high-performance e-commerce store built by abc. We create digital
-              platforms that don’t just look great — they attract customers,
-              boost sales, and strengthen your online presence. Whether you need
-              a sleek business website or a full-scale online store, our
-              solutions are designed for speed, security, and long-term growth.
-              With customized strategies, strong technical foundations, and
-              end-to-end support, we make it easier for you to scale your
-              business confidently in today’s digital world.
+              high-performance e-commerce store built by Global's Vista
+              Technologies. We create digital platforms that don’t just look
+              great — they attract customers, boost sales, and strengthen your
+              online presence. Whether you need a sleek business website or a
+              full-scale online store, our solutions are designed for speed,
+              security, and long-term growth. With customized strategies, strong
+              technical foundations, and end-to-end support, we make it easier
+              for you to scale your business confidently in today’s digital
+              world.
             </p>
             <Link to="/services" className="btn">
               Get Started

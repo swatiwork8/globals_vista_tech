@@ -44,11 +44,17 @@ const About = () => {
         </div>
       </section>
 
-      {/* -------------------- WHY CHOOSE US -------------------- */}
+      {/* -------------------- WHY CHOOSE US (REVERSED) -------------------- */}
       <section className="why-section">
-        <div className="why-container">
-          {/* LEFT TEXT */}
+        {/* NOTE: Added reverse class here */}
+        <div className="why-container reverse">
+          {/* IMAGE RIGHT because reverse */}
           <div className="why-left">
+            <img src={why_choose} alt="Why Choose Us" />
+          </div>
+
+          {/* TEXT LEFT */}
+          <div className="why-right">
             <h1>Why Choose Us?</h1>
 
             <div className="why-point">
@@ -79,11 +85,6 @@ const About = () => {
               </p>
             </div>
           </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="why-right">
-            <img src={why_choose} alt="Why Choose Us" />
-          </div>
         </div>
       </section>
 
@@ -95,12 +96,12 @@ const About = () => {
             <img src={our_vision} alt="Our Vision" />
           </div>
 
-          {/* RIGHT CONTENT */}
+          {/* RIGHT TEXT */}
           <div className="vision-right">
             <h1>Our Vision</h1>
 
             <p>
-              At Global's Vista Technologies, Our vision is to empower
+              At Global's Vista Technologies, our vision is to empower
               businesses with reliable, modern digital solutions that support
               real and sustainable growth. We believe every business deserves a
               solid online foundation — whether through a high-performance

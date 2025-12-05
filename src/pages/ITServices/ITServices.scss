@@ -1,153 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
+
 .it-services-page {
   width: 100%;
-  padding: 80px 0;
-  background: #f9fafb;
+  font-family: "Josefin Sans", sans-serif;
+  color: #111827;
 
   .it-row {
     width: 90%;
-    max-width: 1300px;
-    margin: 0 auto 80px;
+    max-width: 1200px;
+    margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 60px;
+    padding: 30px;
 
-    /* ------------ Text Box ------------ */
+    /* Reverse layout */
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    /* ------------ TEXT AREA ------------ */
     .it-content {
       flex: 1;
+      text-align: justify;
+      text-justify: inter-word;
 
       h1 {
-          font-size: 2.8rem;
-          font-weight: 800;
-          color: #111827;
-          line-height: 1.2;
-          margin-bottom: 20px;
+        font-size: 2.8rem;
+        font-weight: 800;
+        color: #111827;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.15rem;
+        color: #334155;
+        line-height: 1.7;
+        margin-bottom: 25px;
+
+        b {
+          color: #0f172a;
         }
-
-        p {
-          font-size: 1.15rem;
-          color: #334155;
-          line-height: 1.7;
-          margin-bottom: 25px;
-
-          b {
-            color: #0f172a;
-          }
-        }
-
+      }
 
       h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-weight: 700;
-        margin-bottom: 15px;
-        color: #111827;
+        margin-bottom: 20px;
+        color: #0c1b33;
       }
 
       p {
         font-size: 1.1rem;
-        line-height: 1.7;
-        color: #4b5563;
-        margin-bottom: 20px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+        color: #334155;
       }
 
       ul {
-        margin-top: 10px;
+        margin-top: 15px;
+        padding-left: 20px;
 
         li {
-          font-size: 1rem;
-          margin-bottom: 10px;
+          font-size: 1.05rem;
           color: #374151;
-          display: flex;
-          align-items: start;
-          gap: 10px;
+          margin-bottom: 10px;
+          list-style: none;
+          text-align: justify;
 
           &::before {
             content: "✔";
             color: #2563eb;
-            font-weight: 700;
-            font-size: 1.1rem;
+            margin-right: 10px;
           }
         }
       }
     }
 
-    /* ------------ Image Box ------------ */
+    /* ------------ IMAGE AREA ------------ */
     .it-image {
       flex: 1;
       display: flex;
+      align-items: center;
       justify-content: center;
 
       img {
         width: 100%;
-        max-width: 520px;
+        max-width: 550px;
         border-radius: 14px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         transition: 0.35s ease;
-
-        /* Same hover behavior as your WebsiteDevelopment page */
-        &:hover {
-          transform: scale(1.03);
-        }
       }
     }
   }
+}
 
-  /* Reverse layout (image left, text right) */
-  .reverse {
-    flex-direction: row-reverse;
+/* ======================================================
+      IMAGE SLIDE-IN ANIMATION (andar se → bahar)
+====================================================== */
+
+/* Default sections: image left se right slide */
+.it-row .it-image img {
+  opacity: 0;
+  transform: translateX(-60px);
+  animation: slideInLeft 0.9s ease forwards;
+}
+
+/* Reverse sections: image right se left slide */
+.it-row.reverse .it-image img {
+  opacity: 0;
+  transform: translateX(60px);
+  animation: slideInRight 0.9s ease forwards;
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
+}
 
-  /* --------------------- Responsive --------------------- */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-  @media (max-width: 1024px) {
+/* ======================================================
+                    RESPONSIVE DESIGN
+====================================================== */
+
+/* Laptop & Small Desktop */
+@media (max-width: 1200px) {
+  .it-services-page {
     .it-row {
-      margin-bottom: 60px;
+      gap: 40px;
 
+      .it-content h1,
       .it-content h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
       }
     }
   }
+}
 
-  @media (max-width: 850px) {
+/* Tablet */
+@media (max-width: 992px) {
+  .it-services-page {
     .it-row {
       flex-direction: column;
       text-align: center;
+      gap: 30px;
 
       &.reverse {
         flex-direction: column;
       }
 
-      .it-image img {
-        max-width: 450px;
-      }
-
       .it-content {
-        p,
-        ul li {
+        text-align: justify;
+
+        h1,
+        h2 {
+          font-size: 1.9rem;
+        }
+
+        p {
           font-size: 1rem;
         }
       }
+
+      .it-image img {
+        max-width: 480px;
+      }
     }
   }
+}
 
-  @media (max-width: 480px) {
-    padding: 60px 0;
-
+/* Mobile */
+@media (max-width: 768px) {
+  .it-services-page {
     .it-row {
-      margin-bottom: 50px;
+      margin: 60px auto;
 
-      .it-content h2 {
-        font-size: 1.5rem;
-      }
+      .it-content {
+        h1,
+        h2 {
+          font-size: 1.7rem;
+        }
 
-      .it-content p,
-      .it-content ul li {
-        font-size: 0.95rem;
+        p {
+          font-size: 0.95rem;
+        }
+
+        ul li {
+          font-size: 0.95rem;
+        }
       }
 
       .it-image img {
-        max-width: 100%;
+        max-width: 380px;
+      }
+    }
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .it-services-page {
+    .it-row {
+      margin: 50px auto;
+
+      .it-content {
+        h1,
+        h2 {
+          font-size: 1.55rem;
+        }
+      }
+
+      .it-image img {
+        max-width: 300px;
       }
     }
   }
